@@ -4,7 +4,7 @@ const path = require('path');
 const createFileNameByDate = (date = new Date()) => `${date.getFullYear()}-${(+date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate()}`;
 const createCurrentTimeByRecord = (date = new Date()) => `${date.getHours()}:${date.getMinutes()}:${date.getSeconds().toString().padStart(2, '0')}`;
 
-const loggerPath = path.resolve(__dirname, '../logInfo');
+const loggerPath = path.resolve(__dirname, '../loggerInfo');
 
 exports.createLoggerDictionary = (logPath = loggerPath) => {
     if (!fs.existsSync(logPath)) {
